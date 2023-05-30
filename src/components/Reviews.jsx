@@ -13,8 +13,7 @@ const Reviews = ({reviews}) => {
                     {reviews.map(({review_id, review_img_url, title, category, owner}) => {
                         return <li key={review_id} className="list__items--style">
                             <img src={review_img_url} alt={title} />
-                            <div>
-
+                            <div className="list__items--content">
                             <h2>{title}</h2>
                             <p>Categry : {category}</p>
                             <p>Owner : {owner}</p>

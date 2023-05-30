@@ -46,13 +46,15 @@ body {
   color: rgb(55, 55, 55);
 }
 
-.list__items {
+.list__items ul{
   margin: 2rem;
   display: flex;
-  flex-direction: column;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
 .list__items--style {
+  width: auto;
   list-style: none;
   border-radius: 3rem;
   margin: 1rem;
@@ -70,6 +72,31 @@ body {
   border-radius: 1rem;
   background-color:  rgba(132, 220, 198, 0.724);
   margin-top: 1rem;
+  width: 50%;
+  margin: 1rem auto 0;
+}
+.list__items--content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
 }
 
+@media only screen and (min-width: 600px) {
 
+  .list__items ul {
+    justify-content: center;
+  }
+
+  .list__items--style {
+    flex-direction: row;
+    width: 40%;
+  }
+
+
+}
+@media only screen and (min-width: 900px) {
+
+  .list__items--style {
+    width: 30%;
+  }
+}
