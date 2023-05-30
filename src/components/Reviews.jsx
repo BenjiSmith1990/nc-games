@@ -1,13 +1,11 @@
-import { useEffect } from "react";
-import { fetchReviews } from "../apiCalls/apiCalls";
+import { useContext } from "react";
+import { UserContext } from "../context/UserContext";
 
-const Reviews = ({reviews, setReviews}) => {
+const Reviews = ({reviews}) => {
 
-    useEffect(() => {
-        fetchReviews().then(({reviews}) => {
-            setReviews(reviews)
-        })
-    }, [])
+    const user = useContext(UserContext)
+    console.log(user)
+ 
 
     return ( 
         <section className="list__items">

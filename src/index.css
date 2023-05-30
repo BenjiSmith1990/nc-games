@@ -39,6 +39,12 @@ body {
   display: flex;
   justify-content: space-around;
 }
+.navbar a {
+  color: black;
+}
+.navbar a:hover {
+  color: rgb(55, 55, 55);
+}
 
 .list__items {
   margin: 2rem;
