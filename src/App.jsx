@@ -5,6 +5,7 @@ import Navbar from './components/Navbar'
 import Home from './components/Home'
 import Reviews from './components/Reviews'
 import { useState } from "react";
+import Categories from './components/Categories'
 
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
       <Routes>
         <Route path='/' element={<Home isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn}/>}/>
         <Route path='/reviews' element={<Reviews reviews={reviews} setReviews={setReviews}/>}/>
+        <Route path='/categories' element={<Categories/>}/>
       </Routes>
     </>
   )
