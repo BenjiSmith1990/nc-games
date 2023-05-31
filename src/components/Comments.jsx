@@ -24,7 +24,7 @@ const Comments = () => {
                 return <li key={comment_id}>
                     <div className="comment-info" >
                         <p className="author-comment">{author} said :</p>
-                        <p>on : {created_at.slice(0,10)}</p>
+                        <p>{created_at.slice(0,10)}</p>
                     </div>
                         <div className="comment-body">
                             <p>{body}</p>
