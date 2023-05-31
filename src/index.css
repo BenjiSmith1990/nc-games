@@ -31,6 +31,10 @@ body {
   background-color: #ffa69e;
 }
 
+.main-title {
+  font-size: 3.5rem;
+}
+
 .header {
   text-align: center;
 }
@@ -81,6 +85,17 @@ body {
   justify-content: space-around;
 }
 
+.review-body {
+  padding: 2.5rem;
+  line-height: 2.5rem;
+  font-size: 1.5rem;
+  letter-spacing: .1rem;
+}
+
+.review-img,.designer {
+  padding: 1rem;
+}
+
 @media only screen and (min-width: 600px) {
 
   .list__items ul {
@@ -90,6 +105,12 @@ body {
   .list__items--style {
     flex-direction: row;
     width: 40%;
+  }
+
+  .single-review { 
+    display: block;
+    margin: 0 auto;
+    width: 75%;
   }
 
 

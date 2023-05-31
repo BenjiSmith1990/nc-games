@@ -1,11 +1,9 @@
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import { UserContext } from "../context/UserContext";
+import { Link } from "react-router-dom";
 
-const Reviews = ({reviews}) => {
-
+const Reviews = ({reviews, setSingleReview}) => {
     const user = useContext(UserContext)
-    console.log(user)
- 
 
     return ( 
         <section className="list__items">
@@ -14,10 +12,10 @@ const Reviews = ({reviews}) => {
                         return <li key={review_id} className="list__items--style">
                             <img src={review_img_url} alt={title} />
                             <div className="list__items--content">
-                            <h2>{title}</h2>
+                            <h2 >{title}</h2>
                             <p>Categry : {category}</p>
                             <p>Owner : {owner}</p>
-                            <button onClick={() => {clickHandler(review_id)}}>More Info</button>
+                            <Link to={`/reviews/${review_id}`}>More Info</Link>
                             </div>
                         </li>
                     })}
