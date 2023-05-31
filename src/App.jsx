@@ -13,12 +13,12 @@ import SinlgeReview from './components/SingleReview'
 function App() {
   const [isLoggedIn, setIsLoggedIn] = useState({username: 'Ben', isLoggedIn: true})
   const [reviews, setReviews] = useState([])
-
-
+  const [isLoading, setIsLoading] = useState(true)
 
   useEffect(() => {
     fetchReviews().then(({reviews}) => {
         setReviews(reviews)
+        setIsLoading(false)
     })
 }, [])
 
@@ -29,9 +29,9 @@ function App() {
       <Navbar/>
       <Routes>
         <Route path='/' element={<Home setIsLoggedIn={setIsLoggedIn}/>}/>
-        <Route path='/reviews' element={<Reviews reviews={reviews} setReviews={setReviews}/>}/>
+        <Route path='/reviews' element={<Reviews reviews={reviews} setReviews={setReviews} isLoading={isLoading}/>}/>
         <Route path='/categories' element={<Categories/>}/>
-        <Route path='/reviews/:review_id' element={<SinlgeReview />}/>
+        <Route path='/reviews/:review_id' element={<SinlgeReview isLoading={isLoading}/>}/>
       </Routes>
     </UserContext.Provider>
     </>

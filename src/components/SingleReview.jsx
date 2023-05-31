@@ -2,7 +2,7 @@ import {  useEffect, useState } from "react"
 import { useParams } from "react-router-dom"
 import { fetchReviewById } from "../apiCalls/apiCalls"
 
-const SinlgeReview = () => {
+const SinlgeReview = ({isLoading}) => {
     const [singleReview, setSingleReview] = useState(null)
 
     const {review_id : id} = useParams()
@@ -15,8 +15,9 @@ const SinlgeReview = () => {
     },[])
     return ( 
         <div className="list__items--style single-review">
+            {isLoading && (<div><h1>Loading...</h1></div>)}
 
-            {singleReview && (<section className="single-review">
+            {!isLoading && singleReview && (<section className="single-review">
                 <h2>{singleReview[0].title}</h2>
                 <img className="review-img" src={singleReview[0].review_img_url} alt={singleReview[0].title} />
                 <h3 className="category">Category : {singleReview[0].category}</h3>
