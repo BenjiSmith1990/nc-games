@@ -9,3 +9,9 @@ export const fetchReviews = () => {
         return response.data
     })
 }
+
+export const fetchReviewById = (id) => {
+    return benNCGamesUrl.get(`/reviews/${id}`).then(({data}) => {
+        return data
+    })
+}
