@@ -21,3 +21,7 @@ export const fetchCommentsByReviewId = (id) => {
         return data
     })
 }
+
+export const patchReviedVote = (id, val) => {
+    return benNCGamesUrl.patch(`/reviews/${id}`, {inc_votes : val})
+}

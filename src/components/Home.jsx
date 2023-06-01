@@ -4,7 +4,6 @@ import { UserContext } from "../context/UserContext";
 const Home = () => {
    
     const bool = useContext(UserContext)
-    console.log(bool)
 
     return ( 
         <main>
