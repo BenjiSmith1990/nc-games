@@ -20,7 +20,7 @@ const CreateComment = ({setComments}) => {
         setIsPending(true)
         const post = {username: username, body : formBody}
         addComment(id, post).then(({newPost}) => {
-            setComments(currComments => [...currComments, newPost[0]])
+            setComments(currComments => [newPost[0], ...currComments ])
             setIsPending(false)
             setFormBody('')
             setPostErr(false)

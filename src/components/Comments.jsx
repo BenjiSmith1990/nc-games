@@ -13,7 +13,7 @@ const Comments = () => {
             setComments(comments)
             setIsCommentsLoading(false)
         })
-    },[comments])
+    },[])
 
     return ( 
         <div>
@@ -42,6 +42,6 @@ const Comments = () => {
             </section>
         </div>
      );
-}
- 
+    }
+    
 export default Comments;
