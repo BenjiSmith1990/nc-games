@@ -28,7 +28,6 @@ const SinlgeReview = () => {
                 <h4 className="owner">Owner : {singleReview[0].owner}</h4>
                 <h5 className=" designer">Designer : {singleReview[0].designer}</h5>
                 <button className="votes">{singleReview[0].votes}</button>
-                {/* <Link to={`/reviews/${id}/comments`}>Comments</Link> */}
                 <Comments/>
             </section>
             )}
