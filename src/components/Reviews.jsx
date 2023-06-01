@@ -6,7 +6,7 @@ const Reviews = ({reviews, isLoading}) => {
     const user = useContext(UserContext)
     return ( 
         <div>
-            {isLoading && (<div><h1>Loading...</h1></div>)}
+            {isLoading && (<div><h2>Loading...</h2></div>)}
             {!isLoading && (<section className="list__items">
             <ul>
                 {reviews.map(({review_id, review_img_url, title, category, owner}) => {

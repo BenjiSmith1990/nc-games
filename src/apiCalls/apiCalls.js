@@ -15,3 +15,9 @@ export const fetchReviewById = (id) => {
         return data
     })
 }
+
+export const fetchCommentsByReviewId = (id) => {
+    return benNCGamesUrl.get(`/reviews/${id}/comments`).then(({data}) => {
+        return data
+    })
+}
