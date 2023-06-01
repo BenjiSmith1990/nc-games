@@ -3,7 +3,7 @@ import { UserContext } from "../context/UserContext";
 import { Link } from "react-router-dom";
 
 const Reviews = ({reviews, isLoading}) => {
-    const user = useContext(UserContext)
+    const {isLoggedIn} = useContext(UserContext)
     return ( 
         <div>
             {isLoading && (<div><h2>Loading...</h2></div>)}
