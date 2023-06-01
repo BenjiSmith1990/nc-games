@@ -12,7 +12,7 @@ import SinlgeReview from './components/SingleReview'
 import Comments from './components/Comments'
 
 function App() {
-  const [isLoggedIn, setIsLoggedIn] = useState({username: 'Ben', isLoggedIn: true})
+  const [isLoggedIn, setIsLoggedIn] = useState({username: 'jessjelly', isLoggedIn: true})
   const [reviews, setReviews] = useState([])
   const [isLoading, setIsLoading] = useState(true)
 

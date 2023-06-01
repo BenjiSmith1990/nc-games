@@ -53,7 +53,7 @@ const SinlgeReview = () => {
                     <p>{votes}</p>
                     <button id="vote-btn-up" onClick={()=> {handleClick(1)}} disabled={hasVoted}><i className="arrow up"></i></button>
                 </div>
-                {voteErr && <h4 className="vote-error-msg">Server Error, Please try again!</h4>}
+                {voteErr && <h4 className="error-msg">Server Error, Please try again!</h4>}
                 <Comments/>
             </section>
             )}
