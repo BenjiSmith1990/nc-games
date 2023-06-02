@@ -41,7 +41,7 @@ const CreateComment = ({setComments}) => {
     return ( 
         <section>
             <h2 className="post-header">Post A Comment : </h2>
-                {inputError && <div><p className="error-msg">Please write something</p></div>}
+                {inputError && <div><p className="error-msg">Write something insightful...</p></div>}
             {   
                 postErr 
                 ? <div><p className="error-msg">Server Error, Please refresh and try again</p></div> 
