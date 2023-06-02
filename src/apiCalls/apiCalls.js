@@ -27,7 +27,7 @@ export const patchReviedVote = (id, val) => {
 }
 
 export const addComment = (id, formBody) => {
-    return benNCGamesUrl.post(`/reviews/${id}/comments`, formBody).then(({data}) => {
+    return benNCGamesUrl.post(`/revies/${id}/comments`, formBody).then(({data}) => {
         return data
     })
 }

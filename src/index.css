@@ -17,6 +17,7 @@
 
 html {
   font-size: 62.5%;
+  color: black;
 }
 
 * {
@@ -79,6 +80,7 @@ body {
   margin-top: 1rem;
   width: 50%;
   margin: 1rem auto 0;
+  color: black;
 }
 .list__items--content {
   display: flex;
@@ -198,6 +200,7 @@ body {
   border-radius: 1rem;
   padding: 1rem;
   margin: 1rem;
+  color: black;
 }
 
 .post-header {
